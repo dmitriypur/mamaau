@@ -1,0 +1,177 @@
+.page{
+
+   &__title{
+      font-size: rem(45);
+      line-height: rem(60);
+      font-weight: 500;
+      margin-bottom: rem(45);
+   }
+
+   h2{
+      font-size: rem(36);
+      line-height: rem(46);
+      font-weight: 500;
+      margin: rem(30) 0 rem(20);
+   }
+
+   h3{
+      font-size: rem(26);
+      line-height: rem(32);
+      font-weight: 600;
+      margin: rem(30) 0 rem(20);
+   }
+
+   &__wrap{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: rem(30);
+   }
+   &__content{
+      max-width: 100%;
+
+      p{
+         line-height: rem(26);
+         margin-bottom: rem(20);
+      }
+      ul{
+         margin: rem(30) 0;
+         li{
+            position: relative;
+            padding-left: rem(20);
+            line-height: rem(28);
+   
+            &::before{
+               content: '';
+               position: absolute;
+               top: 14px;
+               left: 10px;
+               width: 2px;
+               height: 2px;
+               background-color: $textColor;
+               border-radius: 2px;
+            }
+         }
+      }
+      ol{
+         margin-left: rem(20);
+         li{
+            position: relative;
+            line-height: rem(28);
+            margin-bottom: rem(20);
+         }
+      }
+      
+      .spollers{
+         margin: rem(30) 0 rem(30);
+   
+         &__item{
+            margin-bottom: 30px;
+         }
+         &__title{
+            font-size: rem(26);
+            padding-left: 0;
+            padding-right: 20px;
+   
+            &::before{
+               left: unset;
+               right: 0;
+               top: 10px;
+               transform: translateY(0) rotate(-45deg);
+            }
+            &._spoller-active::before{
+               transform: translateY(0) rotate(45deg);
+            }
+         }
+         &__body{
+            padding-top: 20px;
+            padding-left: 0;
+            padding-right: 20px;
+         }
+      }
+   }
+   
+   @media (max-width: $tablet) {
+      &__title{
+         font-size: rem(24);
+         line-height: rem(30);
+         margin-bottom: rem(25);
+      }
+      h2{
+         font-size: rem(22);
+         line-height: rem(28);
+      }
+   
+      h3{
+         font-size: rem(20);
+         line-height: rem(26);
+      }
+      &__wrap{
+         flex-wrap: wrap;
+      }
+      &__content{
+
+         .spollers{
+            &__title{
+               font-size: rem(18);
+               line-height: rem(26);
+            }
+         }
+      }
+      
+   }
+
+   .training-options{
+      h2{
+         font-size: rem(36);
+         line-height: rem(46);
+         font-weight: 500;
+         margin: rem(30) 0;
+      }
+      .btn-blue{
+         margin: auto auto 0;
+         width: 100%;
+         min-width: 220px;
+         padding: 17px;
+      }
+   }
+
+   &.training{
+      h2{
+         margin-bottom: rem(50);
+      }
+      .spollers__title{
+         font-size: rem(20);
+         line-height: rem(28);
+      }
+      .select{
+         width: 90%;
+         margin-top: auto;
+      }
+      .form-application__inputs input[type=text]{
+         width: 100%;
+      }
+      .form-application__inputs input[type=text]:nth-child(2){
+         margin-left: 0;
+      }
+
+      @media (max-width: $mobile) {
+         .select{
+            width: 100%;
+         }
+      }
+   }
+}
+
+blockquote{
+   line-height: rem(30);
+   font-weight: 500;
+   padding: 60px 115px;
+   background-color: lighten($lightBlue, 9%);
+
+   @media (max-width: $mobile) {
+      line-height: rem(24);
+      font-weight: 600;
+      padding: rem(30);
+   }
+}

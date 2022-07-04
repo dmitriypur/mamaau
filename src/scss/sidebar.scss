@@ -1,0 +1,17 @@
+.page__sidebar {
+}
+.sidebar {
+   min-width: rem(260);
+
+   @media (max-width: $tablet) {
+      margin-top: rem(50);
+   }
+}
+.sidebar__list {
+}
+.sidebar__item {
+}
+.sidebar__link {
+}
+.sidebar__text {
+}
