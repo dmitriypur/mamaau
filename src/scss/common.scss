@@ -405,22 +405,3 @@ input{
 	display: block;
 	min-height: rem(30);
 }
-a.upper-link{
-	color: $blue;
-	font-weight: 600;
-	line-height: rem(32);
-	position: relative;
-
-	&::before{
-	 content: '';
-	 position: absolute;
-	 top: 2px;
-	 right: -25px;
-	 width: 10px;
-	 height: 10px;
-	 transform: rotate(45deg);
-	 border-right: 2px solid $blue;
-	 border-bottom: 2px solid $blue;
-	 transition: transform 0.5s ease;
- }
-}

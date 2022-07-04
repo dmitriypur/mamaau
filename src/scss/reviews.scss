@@ -1,5 +1,25 @@
 .reviews{
    margin-bottom: rem(30);
+
+   a.upper-link{
+      color: $blue;
+      font-weight: 600;
+      line-height: rem(32);
+      position: relative;
+   
+      &::before{
+       content: '';
+       position: absolute;
+       top: 2px;
+       right: -25px;
+       width: 10px;
+       height: 10px;
+       transform: rotate(45deg);
+       border-right: 2px solid $blue;
+       border-bottom: 2px solid $blue;
+       transition: transform 0.5s ease;
+    }
+   }
 }
 .review__list {
    column-gap: rem(24);
@@ -34,6 +54,7 @@
    font-size: rem(22);
    line-height: rem(27);
    font-weight: 600;
+   
 }
 .review_date {
    font-size: rem(16);
@@ -45,5 +66,16 @@
 .review__form{
    .form-application__inputs{
       width: 100%;
+   }
+}
+
+@media (max-width: $mobile) {
+   .review_author {
+      font-size: rem(16);
+      line-height: rem(22);
+   }
+   .review_date {
+      font-size: rem(14);
+      line-height: rem(20);
    }
 }

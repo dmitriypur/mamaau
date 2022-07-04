@@ -1,6 +1,6 @@
 body::after {
 	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.4);
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -47,15 +47,53 @@ body::after {
 	align-items: center;
 }
 .popup__content {
+	position: relative;
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background-color: #fff;
+	padding: 55px;
 	width: 100%;
 	max-width: 900px;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
+	}
+
+	@media (max-width: $mobile) {
+		padding: 20px;
+	}
+}
+.popup__text{
+	img{
+		width: 100%;
+		height: auto;
+	}
+	p{
+		margin-bottom: rem(20);
+	}
+	@media (max-width: $mobile) {
+		p{
+			margin-bottom: rem(10);
+		}
+	}
+}
+.popup__close{
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	background: transparent;
+	svg{
+		width: 45px;
+		height: 45px;
+	}
+
+	@media (max-width: $mobile) {
+		top: 15px;
+		right: 15px;
+		svg{
+			width: 35px;
+			height: 35px;
+		}
 	}
 }
