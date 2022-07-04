@@ -1,0 +1,35 @@
+
+.download__list {
+}
+.download__item {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 30px 0;
+   border-bottom: 1px solid $lightGrey;
+
+   &:last-child{
+      border-bottom: none;
+   }
+}
+p.download__text {
+   color: $darkBlue;
+   margin-bottom: 0;
+}
+.download__link {
+   display: flex;
+   align-items: center;
+   padding: 10px 15px;
+   border: 1px solid $blue;
+   border-radius: 6px;
+   color: $blue;
+   margin-left: 50px;
+
+   svg{
+      width: rem(16);
+      height: rem(17);
+      margin-right: rem(12);
+   }
+
+}

@@ -669,17 +669,40 @@ let heroItemBg = document.querySelectorAll('.hero__col');
 function setDataBackground(selector) {
 	selector.forEach(el => {
 		if (el.classList.contains('hero__col-first')) {
-			if (el.dataset.bg) {
-				el.style.backgroundImage = `url(${el.dataset.bg})`
+			if (el.dataset.bgi) {
+				el.style.backgroundImage = `url(${el.dataset.bgi})`
 			}
 		} else {
 			if (window.innerWidth < 992) {
 				el.classList.add('hero__col-first');
-				if (el.dataset.bg) {
-					el.style.backgroundImage = `url(${el.dataset.bg})`
+				if (el.dataset.bgi) {
+					el.style.backgroundImage = `url(${el.dataset.bgi})`
 				}
 			}
 		}
 	})
 }
 setDataBackground(heroItemBg)
+
+function addSidebarMenu(selector, to) {
+	let liSidebar = ''
+	selector.forEach((elem, i) => {
+		elem.setAttribute('id', 't' + i)
+		let li = document.createElement('li')
+		li.setAttribute('class', 'sidebar__item')
+		let a = document.createElement('a')
+		a.setAttribute('class', 'sidebar__link')
+		a.setAttribute('href', '#')
+		a.setAttribute('data-goto', '#t' + i)
+		a.setAttribute('data-goto-top', '50')
+		a.innerText = elem.innerText
+		li.insertAdjacentElement('beforeend', a)
+		to.insertAdjacentElement('beforeend', li)
+	})
+	 
+}
+
+let t4 = document.querySelectorAll('h4');
+let sbList = document.querySelector('.sidebar__list')
+
+addSidebarMenu(t4, sbList)

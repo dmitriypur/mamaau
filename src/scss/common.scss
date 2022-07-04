@@ -28,6 +28,10 @@ p{
    font-weight: 400;
    line-height: rem(26);
 }
+img{
+	width: 100%;
+	height: auto;
+}
 .text-bold{
    font-weight: 600;
 }
@@ -404,4 +408,32 @@ input{
 .separator__block{
 	display: block;
 	min-height: rem(30);
+}
+.separator__block-2{
+	display: block;
+	min-height: rem(60);
+}
+.separator__block-3{
+	display: block;
+	min-height: rem(90);
+}
+.upper-link-arrow{
+   color: $blue;
+   font-weight: 600;
+   line-height: rem(32);
+   position: relative;
+	text-transform: uppercase;
+
+   &::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: -25px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-right: 2px solid $blue;
+    border-bottom: 2px solid $blue;
+    transition: transform 0.5s ease;
+   }
 }

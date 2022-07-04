@@ -1,0 +1,39 @@
+.table__block{
+   
+   @media (max-width: $tablet) {
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+         width: 0;
+      }
+   }
+}
+p.text__blue{
+   color: $darkBlue;
+   font-size: rem(26);
+   line-height: rem(31);
+   font-weight: 600;
+   margin-bottom: rem(30);
+}
+
+table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #B9B9B9;
+	border-collapse: collapse; 
+}
+
+table tr:first-child td {
+	font-weight: 600;
+   font-size: rem(20);
+   line-height: rem(28);
+	padding: 15px;
+	background: #efefef;
+	border: 1px solid #B9B9B9;
+}
+table td {
+	border: 1px solid #B9B9B9;
+	padding: 15px;
+   width: 342px;
+   min-width: 300px;
+}

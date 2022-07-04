@@ -373,26 +373,6 @@
         margin-bottom: 50px;
     }
 
-    a.upper-link{
-        color: $blue;
-        font-weight: 600;
-        line-height: rem(32);
-        position: relative;
-    
-        &::before{
-         content: '';
-         position: absolute;
-         top: 2px;
-         right: -25px;
-         width: 10px;
-         height: 10px;
-         transform: rotate(45deg);
-         border-right: 2px solid $blue;
-         border-bottom: 2px solid $blue;
-         transition: transform 0.5s ease;
-     }
-    }
-
     @media (max-width: $tablet) {
         padding: 50px 0 100px;
         h2{
