@@ -194,6 +194,7 @@ input[type=checkbox]:checked+label::after{
 }
 
 input[type=text],
+textarea,
 .select__title{
 	padding: 23px;
 	background: transparent;
@@ -208,10 +209,18 @@ input[type=text],
 		padding: unset;
 	}
 }
-input[type=text]::placeholder{
+textarea{
+	width: 100%;
+	margin-bottom: rem(30);
+	border-radius: 6px;
+	outline: none;
+}
+input[type=text]::placeholder,
+textarea::placeholder{
 	color: $white;
 }
-input[type=text]:focus::placeholder{
+input[type=text]:focus::placeholder,
+textarea:focus::placeholder{
 	opacity: 0.5;
 }
 
@@ -395,4 +404,23 @@ input{
 .separator__block{
 	display: block;
 	min-height: rem(30);
+}
+a.upper-link{
+	color: $blue;
+	font-weight: 600;
+	line-height: rem(32);
+	position: relative;
+
+	&::before{
+	 content: '';
+	 position: absolute;
+	 top: 2px;
+	 right: -25px;
+	 width: 10px;
+	 height: 10px;
+	 transform: rotate(45deg);
+	 border-right: 2px solid $blue;
+	 border-bottom: 2px solid $blue;
+	 transition: transform 0.5s ease;
+ }
 }

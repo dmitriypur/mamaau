@@ -1,5 +1,9 @@
+.reviews{
+   margin-bottom: rem(30);
+}
 .review__list {
    column-gap: rem(24);
+   margin-bottom: 30px;
 
    @media only screen and (min-width: $tablet) {
       column-count: 2;
@@ -37,4 +41,9 @@
 }
 .review_text {
    font-weight: 500;
+}
+.review__form{
+   .form-application__inputs{
+      width: 100%;
+   }
 }
