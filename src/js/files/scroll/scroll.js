@@ -139,7 +139,7 @@ export function stickyBlock() {
 			let stickyItemValues = {
 				position: "relative",
 				bottom: "auto",
-				top: "0px",
+				top: "20px",
 				left: "0px",
 				width: "auto"
 			}
@@ -148,14 +148,14 @@ export function stickyBlock() {
 					if (scrollY >= startPoint && scrollY <= endPoint) {
 						stickyItemValues.position = `fixed`;
 						stickyItemValues.bottom = `auto`;
-						stickyItemValues.top = `${offsetTop}px`;
+						stickyItemValues.top = `${offsetTop + 20}px`;
 						stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left}px`; // Учесть разницу в ширине экрана?
 						stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
 					} else if (scrollY >= endPoint) {
 						stickyItemValues.position = `absolute`;
 						stickyItemValues.bottom = `${stickyConfig.bottom}px`;
 						stickyItemValues.top = `auto`;
-						stickyItemValues.left = `0px`;
+						stickyItemValues.left = `20px`;
 						stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
 					}
 				}
