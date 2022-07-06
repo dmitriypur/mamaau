@@ -114,6 +114,14 @@ header.header{
 				}
 			}
 
+			&.active a{
+				@media(min-width: $tablet){
+					&::before{
+						width: 100%;
+					}
+				}
+			}
+
 			.sub-menu{
 				visibility: hidden;
 				opacity: 0;
@@ -152,13 +160,15 @@ header.header{
 						color: $blue;
 						text-decoration: underline;
 					}
-					&.active{
-						color: lighten($textColor, 50%);
+					
+				}
 
-						&:hover{
-							color: $blue;
-							text-decoration: underline;
-						}
+				.active a{
+					color: lighten($textColor, 50%);
+
+					&:hover{
+						color: $blue;
+						text-decoration: underline;
 					}
 				}
 			}
